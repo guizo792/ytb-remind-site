@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Remind Me Later: privacy policy</title>
+  <meta name="description" content="Privacy policy for the Remind Me Later browser extension.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <a class="brand" href="./"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22a2.5 2.5 0 0 0 2.45-2h-4.9A2.5 2.5 0 0 0 12 22Zm7-6.5V11a7 7 0 0 0-5.5-6.84V3.5a1.5 1.5 0 0 0-3 0v.66A7 7 0 0 0 5 11v4.5L3.3 17.2a.75.75 0 0 0 .53 1.3h16.34a.75.75 0 0 0 .53-1.3L19 15.5Z"/></svg>Remind Me Later</a>
+    <nav aria-label="Pages"><a href="./">Help</a><a href="privacy.html" aria-current="page">Privacy</a></nav>
+  </header>
+  <main>
+    <h1>Privacy policy</h1>
+    <p class="meta">Effective: 7 November 2026 · Developer: Abdellah Guizoul</p>
+    <p class="lead"><strong>YouTube — Remind Me Later</strong> (the "extension") works entirely on your device: your reminders are stored on your own device, never on a server. The developer does not receive, collect or sell any data about you.</p>
+
+    <h2>What the extension stores</h2>
+    <p>When you set a reminder, the extension stores this in your browser's local extension storage:</p>
+    <ul>
+      <li>the link to the YouTube video or Short</li>
+      <li>its title</li>
+      <li>the note you typed, if any</li>
+      <li>the time you chose, the time you created it, and its status (upcoming or due)</li>
+    </ul>
+    <p>This data stays on your device. It is not sent to the developer or to any server run by the developer, and it is not synced. Uninstalling the extension deletes it.</p>
+
+    <h2>What the extension reads</h2>
+    <ul>
+      <li>On YouTube pages, the extension reads the title and link of the video or Short you choose to set a reminder for, and which video card you click a three-dot menu on. It does this only when you click. It does not record what you watch or browse.</li>
+      <li>It does not read your account, your history, your comments, or any other website.</li>
+    </ul>
+
+    <h2>Network requests</h2>
+    <p>The extension loads video thumbnails from <strong>i.ytimg.com</strong>, YouTube's image server, to show them in its popup and in notifications. Like any request to that server, it sees your IP address and the thumbnail requested. The extension makes no other requests.</p>
+
+    <h2>The review request</h2>
+    <p>The extension keeps a small counter on your device: how many due reminders you've opened, and whether you've answered the review request. After a few reminders it helped with, the popup asks you at most once whether you'd like to leave a review. Either answer ends it, and it never asks again. The counter is never sent anywhere.</p>
+
+    <h2>Links to other sites</h2>
+    <p>The extension contains links to this site (help and this policy) and to this extension's page in the Chrome Web Store (to leave a review). They open only when you click them.</p>
+
+    <h2>No tracking</h2>
+    <p>There is no analytics, advertising, telemetry or crash reporting. The extension does not sell or share data, and does not use it for anything other than showing your reminders.</p>
+
+    <h2>Permissions</h2>
+    <table>
+      <thead><tr><th>Permission</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td>storage</td><td>Keeps your reminders on your device</td></tr>
+        <tr><td>alarms</td><td>Wakes the extension at the time you chose</td></tr>
+        <tr><td>notifications</td><td>Shows the reminder when it is due</td></tr>
+        <tr><td>i.ytimg.com</td><td>Loads video thumbnails</td></tr>
+        <tr><td>www.youtube.com</td><td>Adds the bell and menu entry to YouTube pages (a content script that runs only there)</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Changes and contact</h2>
+    <p>If this policy changes, the new version will be published on this page with a new effective date. Questions or problems: see the <a href="./">help page</a>. Reviews are public, so please don't include personal information.</p>
+    <p>This extension is not affiliated with, endorsed by or sponsored by YouTube or Google. YouTube is a trademark of Google LLC.</p>
+  </main>
+  <footer>
+    <p>© 2026 Abdellah Guizoul.</p>
+  </footer>
+</body>
+</html>
