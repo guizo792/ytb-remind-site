@@ -4,45 +4,176 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
-  <title>Remind Me Later: help and support</title>
-  <meta name="description" content="Help for the Remind Me Later browser extension, which sets timed reminders on YouTube videos and Shorts.">
-  <link rel="stylesheet" href="style.css">
+  <title>Remind Me Later: a reminder for any YouTube video</title>
+  <meta name="description" content="Set a timed reminder, with a note, on any YouTube video or Short, and get a notification that brings you straight back. Free, no account, nothing leaves your device.">
+  <link rel="icon" href="icons/48.png">
+  <link rel="stylesheet" href="welcome.css">
+  <script src="theme.js"></script>
 </head>
 <body>
-  <header>
-    <a class="brand" href="./"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22a2.5 2.5 0 0 0 2.45-2h-4.9A2.5 2.5 0 0 0 12 22Zm7-6.5V11a7 7 0 0 0-5.5-6.84V3.5a1.5 1.5 0 0 0-3 0v.66A7 7 0 0 0 5 11v4.5L3.3 17.2a.75.75 0 0 0 .53 1.3h16.34a.75.75 0 0 0 .53-1.3L19 15.5Z"/></svg>Remind Me Later</a>
-    <nav aria-label="Pages"><a href="./" aria-current="page">Help</a><a href="privacy.html">Privacy</a></nav>
+  <header class="top">
+    <a class="brand" href="#top" aria-label="Remind Me Later">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22a2.5 2.5 0 0 0 2.45-2h-4.9A2.5 2.5 0 0 0 12 22Zm7-6.5V11a7 7 0 0 0-5.5-6.84V3.5a1.5 1.5 0 0 0-3 0v.66A7 7 0 0 0 5 11v4.5L3.3 17.2a.75.75 0 0 0 .53 1.3h16.34a.75.75 0 0 0 .53-1.3L19 15.5Z"/></svg>
+      <span>Remind Me Later</span>
+    </a>
+    <button id="theme" class="icon-button" type="button" aria-pressed="false" aria-label="Switch to dark mode">
+      <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0-5h0v3m0 14v3M2 12h3m14 0h3M4.9 4.9 7 7m10 10 2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"/></svg>
+    </button>
   </header>
-  <main>
-    <h1>Help and support</h1>
-    <p class="lead">Remind Me Later lets you set a timed reminder, with a note, on any YouTube video or Short, and notifies you when it's due.</p>
 
-    <h2>Something not working?</h2>
-    <div class="card">
-      <p><strong>Tell me what happened.</strong> Open the extension's page in the Chrome Web Store, go to its <em>Reviews</em> tab and say which browser you use, what you did, and what you expected to happen. I read them all.</p>
-      <p><a class="button" data-link="reviews" target="_blank" rel="noopener noreferrer" hidden>Open the Reviews page</a></p>
-      <p><strong>Reviews are public.</strong> Please don't include personal information. You sign in with your Google account, the one you already use in Chrome.</p>
-    </div>
+  <main id="top">
 
-    <h2>Common questions</h2>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="mascot" aria-hidden="true">
+          <svg viewBox="0 0 120 120">
+            <defs>
+              <linearGradient id="bellFill" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff6b7d"/><stop offset="1" stop-color="#c40028"/></linearGradient>
+            </defs>
+            <g class="swing">
+              <path d="M60 14a8 8 0 0 0-8 8v3.2C37 29 27 42 27 58v22l-9 10v4h84v-4l-9-10V58c0-16-10-29-25-32.8V22a8 8 0 0 0-8-8Z" fill="url(#bellFill)"/>
+              <path d="M44 95a16 16 0 0 0 32 0Z" fill="#8f001c"/>
+              <ellipse cx="45" cy="52" rx="6" ry="9" fill="#fff"/><ellipse cx="75" cy="52" rx="6" ry="9" fill="#fff"/>
+              <circle class="pupil" cx="46" cy="54" r="3.6" fill="#2a0008"/><circle class="pupil" cx="76" cy="54" r="3.6" fill="#2a0008"/>
+              <path d="M49 70q11 11 22 0" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+              <circle cx="36" cy="68" r="5" fill="#ffb3bd" opacity=".7"/><circle cx="84" cy="68" r="5" fill="#ffb3bd" opacity=".7"/>
+            </g>
+          </svg>
+        </div>
+        <p class="eyebrow">Free browser extension</p>
+        <h1>Never lose a video you <span class="grad">meant to watch.</span></h1>
+        <p class="lead">Pick a time, add a note, and get a notification that brings you straight back to any YouTube video or Short.</p>
+        <p class="cta">
+          <a class="button primary" href="#features">See what it does</a>
+        </p>
+        <p class="fine">Free · no account · nothing leaves your device</p>
+      </div>
 
-    <h3>I didn't get a notification</h3>
-    <p>Reminders fire while your browser is running; if it was closed, you'll be notified when it starts. Also check that your system isn't in Do Not Disturb or Focus mode and that notifications are allowed for your browser in your system settings. Even when a notification is hidden, the number on the extension's toolbar icon shows how many reminders are due, and they're all listed in its popup.</p>
+      <div class="hero-demo">
+        <h2 id="demo-title" class="demo-title">Try it right here</h2>
+        <div id="demo" class="demo" aria-labelledby="demo-title">
+          <div class="player" aria-hidden="true"><div class="art"></div><div class="play"></div><div class="scrub"><i></i></div></div>
+          <div class="meta">
+            <p class="vtitle">Your next favourite video</p>
+            <p class="channel">A channel you like · 1.2M views</p>
+          </div>
+          <div class="bar">
+            <span class="pill" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M2 21h4V9H2v12Zm20-11a2 2 0 0 0-2-2h-6.3l1-4.6v-.3c0-.4-.2-.8-.4-1.1L13.2 1 6.6 7.6C6.2 8 6 8.5 6 9v10a2 2 0 0 0 2 2h9c.8 0 1.5-.5 1.8-1.2l3-7.1c.1-.2.2-.5.2-.7v-2Z"/></svg>12K</span>
+            <span class="pill round" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m14 9-.1-4.4L22 12l-8.1 7.4L14 15c-6 0-10 2-12 7 1-7 4-12 12-13Z"/></svg></span>
+            <button id="demo-bell" class="pill round bell nudge" type="button" aria-label="Remind Me" title="Remind me">
+              <svg class="outline" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z"/></svg>
+              <svg class="filled" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22a2.5 2.5 0 0 0 2.45-2h-4.9A2.5 2.5 0 0 0 12 22Zm7-6.5V11a7 7 0 0 0-5.5-6.84V3.5a1.5 1.5 0 0 0-3 0v.66A7 7 0 0 0 5 11v4.5L3.3 17.2a.75.75 0 0 0 .53 1.3h16.34a.75.75 0 0 0 .53-1.3L19 15.5Z"/></svg>
+            </button>
+            <span class="pill round" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M17 18v1H6v-1h11Zm-.5-6.6-.7-.7-3.8 3.7V4h-1v10.4l-3.8-3.7-.7.7 5 5 5-5Z"/></svg></span>
+          </div>
 
-    <h3>Where are my reminders stored?</h3>
-    <p>On your own device, in your browser's extension storage. They aren't sent anywhere and they don't sync to other computers. See the <a href="privacy.html">privacy policy</a>.</p>
+          <div class="slot"><p id="demo-hint" class="demo-hint"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4-8 8h5v8h6v-8h5Z"/></svg>Click the bell to set a pretend reminder</p><div id="demo-toast" class="toast" role="status" hidden></div></div>
+          <div id="demo-dialog" class="dialog" role="dialog" aria-label="Remind me later" hidden>
+            <div class="panel">
+              <p class="panel-title"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22a2.5 2.5 0 0 0 2.45-2h-4.9A2.5 2.5 0 0 0 12 22Zm7-6.5V11a7 7 0 0 0-5.5-6.84V3.5a1.5 1.5 0 0 0-3 0v.66A7 7 0 0 0 5 11v4.5L3.3 17.2a.75.75 0 0 0 .53 1.3h16.34a.75.75 0 0 0 .53-1.3L19 15.5Z"/></svg>Remind me about this</p>
+              <div class="options" id="demo-options"></div>
+              <button class="link-button" type="button" data-close>Cancel</button>
+            </div>
+          </div>
+          <div id="demo-notice" class="notice" hidden>
+            <div class="notice-head"><span>Remind Me Later</span><span>now</span></div>
+            <div class="notice-body">
+              <div class="thumb" aria-hidden="true"></div>
+              <div><strong>Watch: Your next favourite video</strong><span>Time to watch this video.</span></div>
+            </div>
+            <div class="notice-actions">
+              <button type="button" data-action="open">Open video</button>
+              <button type="button" data-action="snooze">Snooze 60 min</button>
+            </div>
+          </div>
+        </div>
+        <div id="demo-result" class="result" aria-live="polite" hidden>
+          <p></p>
+          <button class="button ghost small" type="button" data-replay>Try again</button>
+        </div>
+        <p class="demo-caption">A demo, so nothing is saved. On YouTube it looks just like this, and the real notification pops up on your desktop.</p>
+      </div>
+    </section>
 
-    <h3>How do I delete my data?</h3>
-    <p>Cancel or dismiss individual reminders in the extension's popup. To remove everything, uninstall the extension, which deletes all of its stored data.</p>
+    <section id="how" class="section" aria-labelledby="how-title">
+      <h2 id="how-title">How it works</h2>
+      <ol class="steps">
+        <li><span class="num">1</span><h3>Click the bell</h3><p>It sits beside Like and Share on every video and Short. Prefer menus? It's in the three-dot menu of any video card too.</p></li>
+        <li><span class="num">2</span><h3>Pick a time</h3><p>20 minutes, tomorrow, next week, or any date. Add a note so you remember why.</p></li>
+        <li><span class="num">3</span><h3>Get nudged</h3><p>A notification arrives with the thumbnail, and one click takes you back to the video.</p></li>
+      </ol>
+    </section>
 
-    <h3>Which browsers does it work in?</h3>
-    <p>Chrome and other Chromium-based desktop browsers, such as Brave. It doesn't work in phone browsers or in the YouTube app.</p>
+    <section id="features" class="section" aria-labelledby="features-title">
+      <h2 id="features-title">Everything you need, nothing you don't</h2>
+      <div class="grid">
+        <article>
+          <div class="visual" aria-hidden="true"><span class="chip-ui"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 21h4V9H2v12Zm20-11a2 2 0 0 0-2-2h-6.3l1-4.6v-.3c0-.4-.2-.8-.4-1.1L13.2 1 6.6 7.6C6.2 8 6 8.5 6 9v10a2 2 0 0 0 2 2h9c.8 0 1.5-.5 1.8-1.2l3-7.1c.1-.2.2-.5.2-.7v-2Z"/></svg>12K</span><span class="chip-ui round"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 9-.1-4.4L22 12l-8.1 7.4L14 15c-6 0-10 2-12 7 1-7 4-12 12-13Z"/></svg></span><span class="chip-ui round hot"><svg viewBox="0 0 24 24"><path d="M12 22a2.5 2.5 0 0 0 2.45-2h-4.9A2.5 2.5 0 0 0 12 22Zm7-6.5V11a7 7 0 0 0-5.5-6.84V3.5a1.5 1.5 0 0 0-3 0v.66A7 7 0 0 0 5 11v4.5L3.3 17.2a.75.75 0 0 0 .53 1.3h16.34a.75.75 0 0 0 .53-1.3L19 15.5Z"/></svg></span></div>
+          <h3>On every video and Short</h3><p>A bell right where your hand already goes. It turns red when a video already has a reminder.</p>
+        </article>
+        <article>
+          <div class="visual col" aria-hidden="true"><span class="menu-row hot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22a2.5 2.5 0 0 0 2.45-2h-4.9A2.5 2.5 0 0 0 12 22Zm7-6.5V11a7 7 0 0 0-5.5-6.84V3.5a1.5 1.5 0 0 0-3 0v.66A7 7 0 0 0 5 11v4.5L3.3 17.2a.75.75 0 0 0 .53 1.3h16.34a.75.75 0 0 0 .53-1.3L19 15.5Z"/></svg>Remind me</span><span class="menu-row">Add to queue</span><span class="menu-row">Share</span></div>
+          <h3>In the three-dot menu</h3><p>On the home page, in search and in the sidebar, for videos and Shorts alike.</p>
+        </article>
+        <article>
+          <div class="visual wrap" aria-hidden="true"><span class="chip-ui">20 min</span><span class="chip-ui hot">1 hour</span><span class="chip-ui">Tomorrow</span><span class="chip-ui">Next week</span></div>
+          <h3>Quick times, or your own</h3><p>One click for the usual, or an exact date and time when it matters.</p>
+        </article>
+        <article>
+          <div class="visual col" aria-hidden="true"><span class="note-ui">Watch the second half with Sam on Friday</span></div>
+          <h3>Notes to your future self</h3><p>Remember why you saved it, and what you meant to do about it.</p>
+        </article>
+        <article>
+          <div class="visual col" aria-hidden="true"><span class="note-ui strong">Watch: Your next favourite video</span><span class="row-ui"><span class="chip-ui hot">Open video</span><span class="chip-ui">Snooze 60 min</span></span></div>
+          <h3>Notifications that wait for you</h3><p>With the thumbnail, and buttons to open the video or snooze it for an hour.</p>
+        </article>
+        <article>
+          <div class="visual" aria-hidden="true"><span class="toolbar-ui"><svg viewBox="0 0 24 24"><path d="M12 22a2.5 2.5 0 0 0 2.45-2h-4.9A2.5 2.5 0 0 0 12 22Zm7-6.5V11a7 7 0 0 0-5.5-6.84V3.5a1.5 1.5 0 0 0-3 0v.66A7 7 0 0 0 5 11v4.5L3.3 17.2a.75.75 0 0 0 .53 1.3h16.34a.75.75 0 0 0 .53-1.3L19 15.5Z"/></svg><b>2</b></span></div>
+          <h3>A badge that never misses</h3><p>The icon counts what's due. Even if your system hides a notification, you'll still see it.</p>
+        </article>
+        <article>
+          <div class="visual wrap" aria-hidden="true"><span class="chip-ui">Edit</span><span class="chip-ui">Snooze</span><span class="chip-ui hot">Undo</span></div>
+          <h3>Edit, snooze, undo</h3><p>Changed your mind? Undo for a few seconds after you set it, and again after you cancel.</p>
+        </article>
+        <article>
+          <div class="visual" aria-hidden="true"><span class="swatch light"></span><span class="swatch dark"></span></div>
+          <h3>Light and dark</h3><p>It follows your system, and matches YouTube, so it never looks out of place.</p>
+        </article>
+      </div>
+    </section>
 
-    <h3>A button or menu entry is missing on YouTube</h3>
-    <p>Reload the YouTube tab after installing or updating the extension. If it's still missing, YouTube may have changed its page; please report it above and mention which page you were on.</p>
+    <section class="section privacy" aria-labelledby="privacy-title">
+      <h2 id="privacy-title">Private by design</h2>
+      <p>Your reminders live in your browser and nowhere else. There's no account to make and no tracking, and nothing is ever sent to the developer.</p>
+      <ul class="ticks">
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9.5 16.6-4.1-4.1L4 13.9l5.5 5.5L20.6 8.3 19.2 6.9Z"/></svg>No account</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9.5 16.6-4.1-4.1L4 13.9l5.5 5.5L20.6 8.3 19.2 6.9Z"/></svg>No tracking</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9.5 16.6-4.1-4.1L4 13.9l5.5 5.5L20.6 8.3 19.2 6.9Z"/></svg>Stays on your device</li>
+      </ul>
+      <p><a data-link="privacy" href="privacy.html">Read the privacy policy</a></p>
+    </section>
+
+    <section id="support" class="section support" aria-labelledby="support-title">
+      <div class="support-card">
+        <div class="cup" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
+        <h2 id="support-title">Help it get better</h2>
+        <p>It's free, with no ads and no tracking. The best way to help is to tell me what's broken or what's missing.</p>
+        <p class="cta">
+          <a class="button primary" data-link="reviews" target="_blank" rel="noopener noreferrer" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 17.3 6.2 3.7-1.6-7 5.4-4.7-7.2-.6L12 2 9.2 8.7 2 9.3l5.4 4.7-1.6 7Z"/></svg>Rate it or tell me what to improve</a>
+          <a class="button ghost" data-link="support" href="help.html">Help and questions</a>
+          <a class="button ghost" data-link="donate" target="_blank" rel="noopener noreferrer" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>Say thanks</a>
+        </p>
+      </div>
+    </section>
   </main>
-  <footer>
-    <p>© 2026 Abdellah Guizoul. Not affiliated with, endorsed by or sponsored by YouTube or Google. YouTube is a trademark of Google LLC.</p>
+
+  <footer class="foot">
+    <p>Made with care.</p>
+    <p><a data-link="privacy" href="privacy.html">Privacy</a> · <a data-link="support" href="help.html">Help</a></p>
+    <p class="legal">© 2026 Abdellah Guizoul. Not affiliated with, endorsed by or sponsored by YouTube or Google. YouTube is a trademark of Google LLC.</p>
   </footer>
+
+  <script src="welcome.js" defer></script>
 </body>
 </html>
