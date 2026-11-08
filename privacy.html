@@ -7,11 +7,18 @@
   <title>Remind Me Later: privacy policy</title>
   <meta name="description" content="Privacy policy for the Remind Me Later browser extension.">
   <link rel="stylesheet" href="style.css">
+  <script src="theme.js"></script>
 </head>
 <body>
   <header>
     <a class="brand" href="./"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22a2.5 2.5 0 0 0 2.45-2h-4.9A2.5 2.5 0 0 0 12 22Zm7-6.5V11a7 7 0 0 0-5.5-6.84V3.5a1.5 1.5 0 0 0-3 0v.66A7 7 0 0 0 5 11v4.5L3.3 17.2a.75.75 0 0 0 .53 1.3h16.34a.75.75 0 0 0 .53-1.3L19 15.5Z"/></svg>Remind Me Later</a>
-    <nav aria-label="Pages"><a href="./">Home</a><a href="help.html">Help</a><a href="privacy.html" aria-current="page">Privacy</a></nav>
+    <div class="bar">
+      <nav aria-label="Pages"><a href="./">Home</a><a href="help.html">Help</a><a href="privacy.html" aria-current="page">Privacy</a></nav>
+      <button id="theme" class="icon-button" type="button" aria-pressed="false" aria-label="Switch to dark mode">
+        <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0-5h0v3m0 14v3M2 12h3m14 0h3M4.9 4.9 7 7m10 10 2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"/></svg>
+      </button>
+    </div>
   </header>
   <main>
     <h1>Privacy policy</h1>
@@ -65,5 +72,6 @@
   <footer>
     <p>© 2026 Abdellah Guizoul.</p>
   </footer>
+  <script src="site.js" defer></script>
 </body>
 </html>
