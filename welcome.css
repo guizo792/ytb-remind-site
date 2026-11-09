@@ -67,6 +67,11 @@ main, .foot { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
 .pin[data-state="pinned"] [data-show="done"] { display: flex; }
 .pin[data-state="pinned"] p[data-show="done"] { display: block; }
 .pin[data-state="pinned"] .pin-art { display: none; }
+.notify .button { margin-top: 8px; }
+#notify-result:empty { display: none; }
+#notify-result { margin-top: 10px; color: var(--muted); font-size: .95rem; line-height: 1.45; }
+#notify-result p { margin: 0 0 4px; }
+#notify-result ul { margin: 0; padding-left: 20px; }
 .pin-art { display: flex; align-items: center; gap: 8px; flex: none; }
 .mock-arrow { width: 18px; height: 18px; color: var(--muted); flex: none; }
 .mock-toolbar { display: flex; align-items: center; gap: 6px; padding: 5px 8px; border-radius: 10px; background: var(--soft); border: 1px solid var(--border); }

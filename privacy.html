@@ -22,15 +22,17 @@
   </header>
   <main>
     <h1>Privacy policy</h1>
-    <p class="meta">Effective: 7 November 2026 · Developer: Abdellah Guizoul</p>
-    <p class="lead"><strong>YouTube - Remind Me Later</strong> (the "extension") works entirely on your device: your reminders are stored on your own device, never on a server. The developer does not receive, collect or sell any data about you.</p>
+    <p class="meta">Effective: 10 November 2026 · Developer: Abdellah Guizoul</p>
+    <p class="lead"><strong>Remind Me Later: Pages &amp; YouTube</strong> (the "extension") works entirely on your device: your reminders are stored on your own device, never on a server. The developer does not receive, collect or sell any data about you.</p>
 
     <h2>What the extension stores</h2>
     <p>When you set a reminder, the extension stores this in your browser's local extension storage:</p>
     <ul>
-      <li>the link to the YouTube video or Short</li>
+      <li>the link to the YouTube video, Short or web page</li>
       <li>its title</li>
       <li>the note you typed, if any</li>
+      <li>where you were on the page: the first few words of the sentence at the top of your screen, or for a YouTube video the second you had reached (only if "Remember where I am" is ticked, which it is by default)</li>
+      <li>the text you had selected, if you set the reminder from the right-click menu with text selected</li>
       <li>the time you chose, the time you created it, and its status (upcoming or due)</li>
     </ul>
     <p>This data stays on your device. It is not sent to the developer or to any server run by the developer, and it is not synced. Uninstalling the extension deletes it.</p>
@@ -38,11 +40,13 @@
     <h2>What the extension reads</h2>
     <ul>
       <li>On YouTube pages, the extension reads the title and link of the video or Short you choose to set a reminder for, and which video card you click a three-dot menu on. It does this only when you click. It does not record what you watch or browse.</li>
-      <li>It does not read your account, your history, your comments, or any other website.</li>
+      <li>On any other website, the extension reads the link and title of the page you are on only when you ask it to: when you open the toolbar popup (by clicking the icon or with its keyboard shortcut), or when you choose "Remind me later" in the right-click menu. When you save, it reads one short snippet of the visible text (or a video's playback time) to remember where you were, and nothing else from the page. It does not run on other sites. The text you selected is read only when you choose the right-click entry with text selected.</li>
+      <li>Links you save can contain whatever the website put in them. The extension removes common tracking parameters (such as utm_source) and refuses links that contain a password. Everything stays on your device.</li>
+      <li>It does not read your account, your history, your comments, or the rest of any website.</li>
     </ul>
 
     <h2>Network requests</h2>
-    <p>The extension loads video thumbnails from <strong>i.ytimg.com</strong>, YouTube's image server, to show them in its popup and in notifications. Like any request to that server, it sees your IP address and the thumbnail requested. The extension makes no other requests.</p>
+    <p>The extension loads video thumbnails from <strong>i.ytimg.com</strong>, YouTube's image server, to show them in its popup and in notifications. Like any request to that server, it sees your IP address and the thumbnail requested. The extension makes no other requests. Saved web pages are only contacted when you open them yourself, from a notification or from the popup, like any link you click.</p>
 
     <h2>The review request</h2>
     <p>The extension keeps a small counter on your device: how many due reminders you've opened, and whether you've answered the review request. After a few reminders it helped with, the popup asks you at most once whether you'd like to leave a review. Either answer ends it, and it never asks again. The counter is never sent anywhere.</p>
@@ -60,6 +64,10 @@
         <tr><td>storage</td><td>Keeps your reminders on your device</td></tr>
         <tr><td>alarms</td><td>Wakes the extension at the time you chose</td></tr>
         <tr><td>notifications</td><td>Shows the reminder when it is due</td></tr>
+        <tr><td>activeTab</td><td>Lets the extension read the link and title of the page you are on, only after you open the popup or use its keyboard shortcut</td></tr>
+        <tr><td>favicon</td><td>Shows each saved site's icon next to its reminder. The icon comes from the browser's own copy, so nothing is requested from the site</td></tr>
+        <tr><td>scripting</td><td>Reads that one snippet (or the video's playback time) from the page you are on, only when you save a reminder, and only on a page the activeTab permission has just granted</td></tr>
+        <tr><td>contextMenus</td><td>Adds "Remind me later" to the right-click menu</td></tr>
         <tr><td>i.ytimg.com</td><td>Loads video thumbnails</td></tr>
         <tr><td>www.youtube.com</td><td>Adds the bell and menu entry to YouTube pages (a content script that runs only there)</td></tr>
       </tbody>

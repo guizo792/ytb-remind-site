@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
-  <title>Remind Me Later: a reminder for any YouTube video</title>
-  <meta name="description" content="Set a timed reminder, with a note, on any YouTube video or Short, and get a notification that brings you straight back. Free, no account, nothing leaves your device.">
+  <title>Remind Me Later: a reminder for any video or page</title>
+  <meta name="description" content="Set a timed reminder, with a note, on any YouTube video, Short or web page, and get a notification that brings you straight back. Free, no account, nothing leaves your device.">
   <link rel="icon" href="icons/48.png">
   <link rel="stylesheet" href="welcome.css">
   <script src="theme.js"></script>
@@ -42,8 +42,8 @@
           </svg>
         </div>
         <p class="eyebrow">Free browser extension</p>
-        <h1>Never lose a video you <span class="grad">meant to watch.</span></h1>
-        <p class="lead">Pick a time, add a note, and get a notification that brings you straight back to any YouTube video or Short.</p>
+        <h1>Never lose what you <span class="grad">meant to revisit.</span></h1>
+        <p class="lead">Pick a time, add a note, and a notification brings you back to a YouTube video, or to any article or page right where you stopped.</p>
         <p class="cta">
           <a class="button primary" href="https://chromewebstore.google.com/detail/plhlfinfdnfkbdhmklbagejmmdjhkoke" target="_blank" rel="noopener noreferrer">Add to Chrome</a>
           <a class="button ghost" href="#features">See what it does</a>
@@ -93,25 +93,34 @@
           <p></p>
           <button class="button ghost small" type="button" data-replay>Try again</button>
         </div>
-        <p class="demo-caption">A demo, so nothing is saved. On YouTube it looks just like this, and the real notification pops up on your desktop.</p>
+        <p class="demo-caption">A demo, so nothing is saved. On YouTube it looks just like this; on any other page, use the toolbar icon or Alt+Shift+R.</p>
       </div>
     </section>
 
     <section id="how" class="section" aria-labelledby="how-title">
       <h2 id="how-title">How it works</h2>
       <ol class="steps">
-        <li><span class="num">1</span><h3>Click the bell</h3><p>It sits beside Like and Share on every video and Short. Prefer menus? It's in the three-dot menu of any video card too.</p></li>
+        <li><span class="num">1</span><h3>Click the bell, or the toolbar icon</h3><p>On YouTube the bell sits beside Like and Share, and in the three-dot menu of every video card. On any other page, click the toolbar icon, press Alt+Shift+R, or right-click and choose Remind me later.</p></li>
         <li><span class="num">2</span><h3>Pick a time</h3><p>20 minutes, tomorrow, next week, or any date. Add a note so you remember why.</p></li>
-        <li><span class="num">3</span><h3>Get nudged</h3><p>A notification arrives with the thumbnail, and one click takes you back to the video.</p></li>
+        <li><span class="num">3</span><h3>Get nudged</h3><p>A notification arrives, and one click takes you back: the video at the same second, the article at the sentence where you stopped.</p></li>
       </ol>
     </section>
+
 
     <section id="features" class="section" aria-labelledby="features-title">
       <h2 id="features-title">Everything you need, nothing you don't</h2>
       <div class="grid">
         <article>
+          <div class="visual col" aria-hidden="true"><span class="menu-row">Back</span><span class="menu-row hot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22a2.5 2.5 0 0 0 2.45-2h-4.9A2.5 2.5 0 0 0 12 22Zm7-6.5V11a7 7 0 0 0-5.5-6.84V3.5a1.5 1.5 0 0 0-3 0v.66A7 7 0 0 0 5 11v4.5L3.3 17.2a.75.75 0 0 0 .53 1.3h16.34a.75.75 0 0 0 .53-1.3L19 15.5Z"/></svg>Remind me later</span><span class="menu-row">Save as…</span></div>
+          <h3>Any article, blog or page</h3><p>Left a long read open in a tab? Click the toolbar icon, press <strong>Alt+Shift+R</strong> or right-click, and pick when to come back. Select a passage first and it is kept with the reminder.</p>
+        </article>
+        <article>
+          <div class="visual col" aria-hidden="true"><span class="note-ui">Opens at “The second half starts here”</span><span class="row-ui"><span class="chip-ui hot">Resumes at 14:32</span></span></div>
+          <h3>Picks up where you left off</h3><p>A page reopens at the sentence you stopped at, and a YouTube video at the second you reached. No scrolling to find your place.</p>
+        </article>
+        <article>
           <div class="visual" aria-hidden="true"><span class="chip-ui"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 21h4V9H2v12Zm20-11a2 2 0 0 0-2-2h-6.3l1-4.6v-.3c0-.4-.2-.8-.4-1.1L13.2 1 6.6 7.6C6.2 8 6 8.5 6 9v10a2 2 0 0 0 2 2h9c.8 0 1.5-.5 1.8-1.2l3-7.1c.1-.2.2-.5.2-.7v-2Z"/></svg>12K</span><span class="chip-ui round"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 9-.1-4.4L22 12l-8.1 7.4L14 15c-6 0-10 2-12 7 1-7 4-12 12-13Z"/></svg></span><span class="chip-ui round hot"><svg viewBox="0 0 24 24"><path d="M12 22a2.5 2.5 0 0 0 2.45-2h-4.9A2.5 2.5 0 0 0 12 22Zm7-6.5V11a7 7 0 0 0-5.5-6.84V3.5a1.5 1.5 0 0 0-3 0v.66A7 7 0 0 0 5 11v4.5L3.3 17.2a.75.75 0 0 0 .53 1.3h16.34a.75.75 0 0 0 .53-1.3L19 15.5Z"/></svg></span></div>
-          <h3>On every video and Short</h3><p>A bell right where your hand already goes. It turns red when a video already has a reminder.</p>
+          <h3>Right on YouTube</h3><p>A bell beside Like and Share on every video and Short, and an entry in every three-dot menu. It turns red when a video already has a reminder.</p>
         </article>
         <article>
           <div class="visual col" aria-hidden="true"><span class="menu-row hot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22a2.5 2.5 0 0 0 2.45-2h-4.9A2.5 2.5 0 0 0 12 22Zm7-6.5V11a7 7 0 0 0-5.5-6.84V3.5a1.5 1.5 0 0 0-3 0v.66A7 7 0 0 0 5 11v4.5L3.3 17.2a.75.75 0 0 0 .53 1.3h16.34a.75.75 0 0 0 .53-1.3L19 15.5Z"/></svg>Remind me</span><span class="menu-row">Add to queue</span><span class="menu-row">Share</span></div>
@@ -127,7 +136,7 @@
         </article>
         <article>
           <div class="visual col" aria-hidden="true"><span class="note-ui strong">Watch: Your next favourite video</span><span class="row-ui"><span class="chip-ui hot">Open video</span><span class="chip-ui">Snooze 60 min</span></span></div>
-          <h3>Notifications that wait for you</h3><p>With the thumbnail, and buttons to open the video or snooze it for an hour.</p>
+          <h3>Notifications that wait for you</h3><p>With a thumbnail for videos, and buttons to open it or snooze it for an hour.</p>
         </article>
         <article>
           <div class="visual" aria-hidden="true"><span class="toolbar-ui"><svg viewBox="0 0 24 24"><path d="M12 22a2.5 2.5 0 0 0 2.45-2h-4.9A2.5 2.5 0 0 0 12 22Zm7-6.5V11a7 7 0 0 0-5.5-6.84V3.5a1.5 1.5 0 0 0-3 0v.66A7 7 0 0 0 5 11v4.5L3.3 17.2a.75.75 0 0 0 .53 1.3h16.34a.75.75 0 0 0 .53-1.3L19 15.5Z"/></svg><b>2</b></span></div>

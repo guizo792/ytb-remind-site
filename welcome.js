@@ -46,6 +46,37 @@ if (actionApi && typeof actionApi.getUserSettings === 'function') {
   window.addEventListener('focus', checkPinned);
 }
 
+// --- Notification check: a real test notification, and where to look if the desktop does not show it.
+// The browser can say whether *it* allows notifications; only the person can see whether the operating system does.
+// (Classic script, so the wording of lib/tips.js is repeated here.) Inside the extension only. ---
+const notifyStep = document.getElementById('notify-step');
+if (notifyStep && typeof chrome !== 'undefined' && chrome.runtime && chrome.runtime.sendMessage) {
+  notifyStep.hidden = false;
+  const result = document.getElementById('notify-result');
+  const browser = navigator.brave ? 'Brave' : /Edg\//.test(navigator.userAgent) ? 'Microsoft Edge' : /Chrome\//.test(navigator.userAgent) ? 'Google Chrome' : 'your browser';
+  const tips = /Mac/i.test(navigator.userAgent)
+    ? ['Open System Settings → Notifications, choose ' + browser + ', and turn on Allow Notifications.', 'Turn off Do Not Disturb, or any Focus that silences notifications.']
+    : /Windows/i.test(navigator.userAgent)
+      ? ['Open Settings → System → Notifications and make sure notifications are on for ' + browser + '.', 'Turn off Do not disturb (Focus assist), which hides notifications.']
+      : ["Check your desktop's notification settings for " + browser + '.', 'Turn off Do Not Disturb.'];
+  document.getElementById('notify-test').addEventListener('click', async () => {
+    const res = await chrome.runtime.sendMessage({ type: 'testNotification' });
+    const intro = document.createElement('p');
+    intro.textContent = res && res.blocked
+      ? browser + ' has notifications turned off for this extension. Allow them in the browser\'s notification settings.'
+      : res && res.ok
+        ? 'A test notification was sent. Not seeing it? Check your system settings:'
+        : 'The test could not be sent. Check your system settings:';
+    const list = document.createElement('ul');
+    for (const tip of tips) {
+      const item = document.createElement('li');
+      item.textContent = tip;
+      list.append(item);
+    }
+    result.replaceChildren(intro, list);
+  });
+}
+
 // --- The demo: the real flow, played out on a pretend video. It never touches your reminders. ---
 const TOAST_MS = 5000; // like the real toast
 const NOTICE_DELAY_MS = 2600; // "20 minutes later"
