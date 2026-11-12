@@ -53,7 +53,7 @@ const notifyStep = document.getElementById('notify-step');
 if (notifyStep && typeof chrome !== 'undefined' && chrome.runtime && chrome.runtime.sendMessage) {
   notifyStep.hidden = false;
   const result = document.getElementById('notify-result');
-  const browser = navigator.brave ? 'Brave' : /Edg\//.test(navigator.userAgent) ? 'Microsoft Edge' : /Chrome\//.test(navigator.userAgent) ? 'Google Chrome' : 'your browser';
+  const browser = navigator.userAgent.includes('Firefox/') ? 'Firefox' : navigator.brave ? 'Brave' : /Edg\//.test(navigator.userAgent) ? 'Microsoft Edge' : /Chrome\//.test(navigator.userAgent) ? 'Google Chrome' : 'your browser';
   const tips = /Mac/i.test(navigator.userAgent)
     ? ['Open System Settings → Notifications, choose ' + browser + ', and turn on Allow Notifications.', 'Turn off Do Not Disturb, or any Focus that silences notifications.']
     : /Windows/i.test(navigator.userAgent)
